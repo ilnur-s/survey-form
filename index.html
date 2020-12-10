@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/source/style.css">
+  <link rel="stylesheet" href="/source/fonts.css">
+  <title>Survey form</title>
+</head>
+<body>
+  <div class="wrapper">
+  <header class="header">
+    <h1 class="header__title" id="title">Форма опроса</h1>
+    <p class="header__description" id="description">Спасибо, что нашли время пройти этот опрос</p>
+  </header>
+  <form id="survey-form" class="survey-form">
+    <div class="survey-block">
+      <label class="survey-block__title" id="name-label" for="name">Имя</label>
+      <input class="survey-block__input" type="text" id="name" placeholder="Введите Ваше имя" required>
+    </div>
+    <div class="survey-block">
+      <label class="survey-block__title" id="email-label" for="email">E-mail</label>
+      <input class="survey-block__input" type="email" id="email" placeholder="Введите Ваш E-mail" required>
+    </div>
+    <div class="survey-block">
+      <label class="survey-block__title" id="number-label" for="number">Возраст (опционально)</label>
+      <input class="survey-block__input" type="number" id="number"  min="7" max="99" placeholder="Введите Ваш возраст">
+    </div>
+    <div class="survey-block">
+      <p class="survey-block__title">Чем Вы занимаетесь?</p>
+      <select class="survey-block__input" id="dropdown" name="occupation">
+        <option class="survey-block__option" disabled selected></option>
+        <option class="survey-block__option" value="work">Работаю</option>
+        <option class="survey-block__option" value="student">Студент</option>
+        <option class="survey-block__option" value="learner">Ученик</option>
+      </select>
+    </div>
+    <div class="survey-block">
+      <p class="survey-block__title">Проходили ли Вы обучающие онлайн-курсы?</p>
+      <label class="survey-block__label">
+        <input class="survey-block__radio" type="radio" name="courses" value="yes">
+        Да
+      </label>
+      <label class="survey-block__label">
+        <input class="survey-block__radio" type="radio" name="courses" value="no">
+        Нет
+      </label>
+    </div>
+    <div class="survey-block">
+      <p class="survey-block__title">Какой язык программирования Вы изучаете?</p>
+      <select class="survey-block__input" name="favorites">
+        <option class="survey-block__option" disabled selected></option>
+        <option class="survey-block__option" value="javascript">JavaScript</option>
+        <option class="survey-block__option" value="python">Python</option>
+        <option class="survey-block__option" value="java">Java</option>
+        <option class="survey-block__option" value="ruby">Ruby</option>
+        <option class="survey-block__option" value="kotlin">Kotlin</option>
+      </select>
+    </div>
+    <div class="survey-block">
+      <p class="survey-block__title">Выберите направления разработки, которые Вас интересуют?</p>
+        <label class="survey-block__label">
+          <input class="survey-block__checkbox" name="direction" type="checkbox" value="web">
+          Разработка web-приложений
+        </label>
+        <label class="survey-block__label">
+          <input class="survey-block__checkbox" name="direction" type="checkbox" value="desktop">
+          Разработка desktop-приложений
+        </label>
+        <label class="survey-block__label">
+          <input class="survey-block__checkbox" name="direction" type="checkbox" value="server">
+          Разработка серверных приложений
+        </label>
+        <label class="survey-block__label">
+          <input class="survey-block__checkbox" name="direction" type="checkbox" value="mobile">
+          Разработка мобильных приложений
+        </label>
+        <label class="survey-block__label">
+          <input class="survey-block__checkbox" name="direction" type="checkbox" value="game">
+          Разработка игр
+        </label>
+    </div>
+    <div class="survey-block">
+      <p class="survey-block__title">Если у Вас остались пожелания, можете написать их:</p>
+      <textarea class="survey-block__input" name="comments" cols="70" rows="5" placeholder="Введите сюда Ваше пожелание..."></textarea>
+    </div>
+    <div class="survey-block">
+      <input class="survey-block__button" type="submit" name="submit" id="submit">
+    </div>
+  </form>
+</div>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>

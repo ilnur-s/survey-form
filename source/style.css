@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 1.2rem;
+  color: rgb(17, 17, 87);
+}
+
+body::before {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(0deg, rgba(146, 204, 255, 0.8), rgba(192, 192, 200, 0.7) ), url(/source/img/backgraund-img.jpg);
+  z-index: -1;
+  background-size: cover;
+}
+
+.wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.survey-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  background-color: rgba(3, 94, 173, 0.774);
+  border-radius: 10px;
+  color: aliceblue;
+}
+
+.survey-block {
+  padding: 5px;
+  width: 100%;
+}
+
+.survey-block__title,
+.survey-block__label,
+.survey-block__button {
+  display: block;
+}
+
+.survey-block__input {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: rgba(3, 94, 173, 0.774);
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.survey-block__input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
