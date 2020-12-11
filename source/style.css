@@ -77,3 +77,21 @@ body::before {
   border-color: #80bdff;
   box-shadow: 0 0 0 0.2rem rgba(192, 192, 200, 0.7);
 }
+
+.survey-block__button {
+  display: block;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  padding: 0.75rem;
+  margin-top: 7px;
+  background-color: rgb(0, 53, 99);
+  color: var(--survey-labels-color);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.survey-block__button:focus {
+  background-color: rgb(1, 84, 156)
+}
